@@ -29,10 +29,12 @@ namespace Adega
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,6 +46,10 @@ namespace Adega
             this.btLimpar = new System.Windows.Forms.Button();
             this.dgAdega = new System.Windows.Forms.DataGridView();
             this.btInserir = new System.Windows.Forms.Button();
+            this.tbID = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnalterar = new System.Windows.Forms.Button();
+            this.btndeletar = new System.Windows.Forms.Button();
             this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,27 +61,30 @@ namespace Adega
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 29);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(32, 81);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.Size = new System.Drawing.Size(48, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nome:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(183, 29);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(344, 81);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 13);
+            this.label2.Size = new System.Drawing.Size(70, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Categoria:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 61);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(7, 114);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 13);
+            this.label3.Size = new System.Drawing.Size(73, 16);
             this.label3.TabIndex = 2;
             this.label3.Text = "Descrição:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -83,111 +92,190 @@ namespace Adega
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(383, 29);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(607, 82);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(29, 13);
+            this.label4.Size = new System.Drawing.Size(35, 16);
             this.label4.TabIndex = 3;
             this.label4.Text = "Ano:";
             // 
             // tbNome
             // 
-            this.tbNome.Location = new System.Drawing.Point(73, 26);
+            this.tbNome.Location = new System.Drawing.Point(81, 79);
             this.tbNome.Name = "tbNome";
-            this.tbNome.Size = new System.Drawing.Size(100, 20);
+            this.tbNome.Size = new System.Drawing.Size(257, 20);
             this.tbNome.TabIndex = 4;
+            this.tbNome.TextChanged += new System.EventHandler(this.tbNome_TextChanged);
             // 
             // tbCategoria
             // 
-            this.tbCategoria.Location = new System.Drawing.Point(244, 26);
+            this.tbCategoria.Location = new System.Drawing.Point(415, 79);
             this.tbCategoria.Name = "tbCategoria";
-            this.tbCategoria.Size = new System.Drawing.Size(133, 20);
+            this.tbCategoria.Size = new System.Drawing.Size(187, 20);
             this.tbCategoria.TabIndex = 5;
             // 
             // tbDescricao
             // 
             this.tbDescricao.AllowDrop = true;
-            this.tbDescricao.Location = new System.Drawing.Point(73, 58);
+            this.tbDescricao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbDescricao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbDescricao.Location = new System.Drawing.Point(81, 111);
             this.tbDescricao.Multiline = true;
             this.tbDescricao.Name = "tbDescricao";
-            this.tbDescricao.Size = new System.Drawing.Size(412, 83);
+            this.tbDescricao.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.tbDescricao.Size = new System.Drawing.Size(629, 83);
             this.tbDescricao.TabIndex = 6;
             // 
             // tbAno
             // 
-            this.tbAno.Location = new System.Drawing.Point(418, 26);
+            this.tbAno.Location = new System.Drawing.Point(643, 79);
             this.tbAno.Name = "tbAno";
             this.tbAno.Size = new System.Drawing.Size(67, 20);
             this.tbAno.TabIndex = 7;
             // 
             // btLimpar
             // 
-            this.btLimpar.Location = new System.Drawing.Point(683, 99);
+            this.btLimpar.BackColor = System.Drawing.Color.Linen;
+            this.btLimpar.FlatAppearance.BorderColor = System.Drawing.Color.DarkOrange;
+            this.btLimpar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SandyBrown;
+            this.btLimpar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PeachPuff;
+            this.btLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btLimpar.Location = new System.Drawing.Point(635, 22);
             this.btLimpar.Name = "btLimpar";
-            this.btLimpar.Size = new System.Drawing.Size(75, 42);
+            this.btLimpar.Size = new System.Drawing.Size(75, 31);
             this.btLimpar.TabIndex = 8;
             this.btLimpar.Text = "Limpar";
-            this.btLimpar.UseVisualStyleBackColor = true;
+            this.btLimpar.UseVisualStyleBackColor = false;
             this.btLimpar.Click += new System.EventHandler(this.btLimpar_Click);
             // 
             // dgAdega
             // 
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.Orange;
+            this.dgAdega.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.dgAdega.BackgroundColor = System.Drawing.Color.Orange;
             this.dgAdega.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Orange;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgAdega.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgAdega.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgAdega.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.Orange;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgAdega.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            this.dgAdega.ColumnHeadersHeight = 25;
             this.dgAdega.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colID,
             this.colNome,
             this.colCategoria,
             this.colDescricao,
             this.colAno});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Orange;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Moccasin;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgAdega.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgAdega.GridColor = System.Drawing.Color.Black;
-            this.dgAdega.Location = new System.Drawing.Point(2, 172);
+            this.dgAdega.Cursor = System.Windows.Forms.Cursors.Default;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.Orange;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.Orange;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgAdega.DefaultCellStyle = dataGridViewCellStyle17;
+            this.dgAdega.EnableHeadersVisualStyles = false;
+            this.dgAdega.GridColor = System.Drawing.Color.DimGray;
+            this.dgAdega.Location = new System.Drawing.Point(1, 210);
             this.dgAdega.Name = "dgAdega";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Salmon;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgAdega.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgAdega.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.Empty;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgAdega.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
             this.dgAdega.RowHeadersVisible = false;
-            this.dgAdega.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.Empty;
-            this.dgAdega.Size = new System.Drawing.Size(768, 266);
+            this.dgAdega.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.Orange;
+            this.dgAdega.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dgAdega.Size = new System.Drawing.Size(768, 228);
             this.dgAdega.TabIndex = 9;
             this.dgAdega.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgAdega_CellContentClick);
             // 
             // btInserir
             // 
-            this.btInserir.Location = new System.Drawing.Point(491, 26);
+            this.btInserir.BackColor = System.Drawing.Color.Linen;
+            this.btInserir.FlatAppearance.BorderColor = System.Drawing.Color.DarkOrange;
+            this.btInserir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SandyBrown;
+            this.btInserir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PeachPuff;
+            this.btInserir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btInserir.Location = new System.Drawing.Point(365, 22);
             this.btInserir.Name = "btInserir";
-            this.btInserir.Size = new System.Drawing.Size(75, 115);
+            this.btInserir.Size = new System.Drawing.Size(75, 31);
             this.btInserir.TabIndex = 10;
             this.btInserir.Text = "Inserir";
-            this.btInserir.UseVisualStyleBackColor = true;
+            this.btInserir.UseVisualStyleBackColor = false;
             this.btInserir.Click += new System.EventHandler(this.btInserir_Click);
+            // 
+            // tbID
+            // 
+            this.tbID.BackColor = System.Drawing.Color.DarkOrange;
+            this.tbID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbID.Enabled = false;
+            this.tbID.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbID.Location = new System.Drawing.Point(204, 28);
+            this.tbID.MaxLength = 9;
+            this.tbID.Name = "tbID";
+            this.tbID.Size = new System.Drawing.Size(109, 24);
+            this.tbID.TabIndex = 11;
+            this.tbID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbID.TextChanged += new System.EventHandler(this.tbID_TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.DarkOrange;
+            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(94, 28);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(116, 24);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Identificador:";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // btnalterar
+            // 
+            this.btnalterar.BackColor = System.Drawing.Color.Linen;
+            this.btnalterar.FlatAppearance.BorderColor = System.Drawing.Color.DarkOrange;
+            this.btnalterar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SandyBrown;
+            this.btnalterar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PeachPuff;
+            this.btnalterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnalterar.Location = new System.Drawing.Point(446, 22);
+            this.btnalterar.Name = "btnalterar";
+            this.btnalterar.Size = new System.Drawing.Size(75, 31);
+            this.btnalterar.TabIndex = 13;
+            this.btnalterar.Text = "Alterar";
+            this.btnalterar.UseVisualStyleBackColor = false;
+            this.btnalterar.Click += new System.EventHandler(this.btnalterar_Click);
+            // 
+            // btndeletar
+            // 
+            this.btndeletar.BackColor = System.Drawing.Color.Linen;
+            this.btndeletar.FlatAppearance.BorderColor = System.Drawing.Color.DarkOrange;
+            this.btndeletar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SandyBrown;
+            this.btndeletar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PeachPuff;
+            this.btndeletar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btndeletar.Location = new System.Drawing.Point(527, 22);
+            this.btndeletar.Name = "btndeletar";
+            this.btndeletar.Size = new System.Drawing.Size(75, 31);
+            this.btndeletar.TabIndex = 14;
+            this.btndeletar.Text = "Deletar";
+            this.btndeletar.UseVisualStyleBackColor = false;
+            this.btndeletar.Click += new System.EventHandler(this.btndeletar_Click);
             // 
             // colID
             // 
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Orange;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colID.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.Orange;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colID.DefaultCellStyle = dataGridViewCellStyle15;
             this.colID.HeaderText = "ID";
             this.colID.Name = "colID";
             this.colID.Width = 40;
@@ -206,12 +294,14 @@ namespace Adega
             // 
             // colDescricao
             // 
+            this.colDescricao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.colDescricao.HeaderText = "Descrição";
             this.colDescricao.Name = "colDescricao";
-            this.colDescricao.Width = 330;
             // 
             // colAno
             // 
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.colAno.DefaultCellStyle = dataGridViewCellStyle16;
             this.colAno.HeaderText = "Ano";
             this.colAno.Name = "colAno";
             this.colAno.Width = 95;
@@ -222,6 +312,10 @@ namespace Adega
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Orange;
             this.ClientSize = new System.Drawing.Size(770, 450);
+            this.Controls.Add(this.btndeletar);
+            this.Controls.Add(this.btnalterar);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.tbID);
             this.Controls.Add(this.btInserir);
             this.Controls.Add(this.dgAdega);
             this.Controls.Add(this.btLimpar);
@@ -234,6 +328,7 @@ namespace Adega
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FormAdega";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Adega";
             this.Load += new System.EventHandler(this.FormAdega_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgAdega)).EndInit();
@@ -255,6 +350,10 @@ namespace Adega
         private System.Windows.Forms.Button btLimpar;
         private System.Windows.Forms.DataGridView dgAdega;
         private System.Windows.Forms.Button btInserir;
+        private System.Windows.Forms.TextBox tbID;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnalterar;
+        private System.Windows.Forms.Button btndeletar;
         private System.Windows.Forms.DataGridViewTextBoxColumn colID;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNome;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCategoria;
